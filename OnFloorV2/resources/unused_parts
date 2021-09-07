@@ -1,0 +1,292 @@
+ <ul>
+            <li><input type='checkbox' id='cb_mon' value='Monday'> <label for='cb_mon'>Monday</label></li>
+            <li><input type='checkbox' id='cb_tue' value='Tuesday'> <label for='cb_tue'>Tuesday</label></li>
+            <li><input type='checkbox' id='cb_wed' value='Wednesday'> <label for='cb_wed'>Wednesday</label></li>
+            <li><input type='checkbox' id='cb_thr' value='Thursday'> <label for='cb_thr'>Thursday</label></li>
+            <li><input type='checkbox' id='cb_fri' value='Friday'> <label for='cb_fri'>Friday</label></li>
+            <li><input type='checkbox' id='cb_sat' value='Saturday'> <label for='cb_sat'>Saturday</label></li>
+            <li><input type='checkbox' id='cb_auto' value='Auto'> <label for='cb_auto'>Auto</label></li>
+            <li><input type='checkbox' id='cb_off' value='Off'> <label for='cb_off'>Off</label></li>
+</ul>
+
+
+
+   
+<!--Modal-->
+
+      <div id="add-new-task-modal" class="modal">
+         <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p>Adding a new task to the list</p>
+         </div>
+      </div>
+
+<!--Modal-->
+	   
+
+<div class='content-table'>
+<button class='btn-add-set'>Add Task</button>
+<table id='set-table'>
+
+<tr class='table-heading'>
+<th></th>
+<th class='tbl-stat' >Task Count</th>
+<th class='tbl-stat' >Tasks performed this week</th>
+<th class='tbl-stat' >Tasks overdue</th>
+<th>Execute on</th>
+<th></th>
+</tr>
+
+<?php
+
+$dbc = db_connect();
+$query = "SELECT * FROM sets";
+$counter = 0;
+
+if ( $r = mysqli_query( $dbc, $query ) ) {
+while ( $record = mysqli_fetch_array( $r ) ) {
+$set_name = $record['set_name'];
+$days = $record['scheduled_for'];
+$set_id = $record['set_id'];
+$edit_set = 'ediSet'.$set_id;
+$delete_set = 'delSet'.$set_id;
+
+echo"
+<tr>
+<td class='tbl-set-name'>$set_name</td>
+<td>7</td>
+<td>5</td>
+<td>2</td>
+<td>$days</td>
+<td class='tbl-buttons'>
+<button class='btn-edit-set $edit_set'>Edit</button>
+
+<div class='modal $edit_set'>
+<div class='modal-content'>
+<span class='close-modal'>&times;</span>
+<p>$edit_set</p>
+</div>
+</div>
+
+<button class='btn-delete-set $delete_set'>&times;</button>
+
+<div class='modal $delete_set'>
+<div class='modal-content'>
+<span class='close-modal'>&times;</span>
+<p>$delete_set</p>
+</div>
+</div>
+</td>
+</tr>
+";
+}
+}	
+db_disconnect($dbc);
+?>
+</table>
+</div>
+
+
+
+	   
+<div class='set-editing-section'>	   
+<div class='form-wrap'>
+<form action='' class='edit-set'>
+<h1 class='content-heading' >Edit Set</h1>   
+<p>Name: <input type='text'/></p>
+<fieldset class='select-days'>
+<legend>Select Days to Execute</legend>
+<div class='switch-container'>
+<label class='switch'>
+<div>Mon</div>
+<input type='checkbox' name='cb_mon' value='M'>
+<div class='switch-btn'></div>
+</label>
+<label class='switch'>
+<div>Tue</div>
+<input type='checkbox' name='cb_tue' value='T'>
+<div class='switch-btn'></div>
+</label>
+<label class='switch'>
+<div>Wed</div>
+<input type='checkbox' name='cb_wed' value='W'>
+<div class='switch-btn'></div>
+</label>
+<label class='switch'>
+<div>Thr</div>
+<input type='checkbox' name='cb_thr' value='TR'>
+<div class='switch-btn'></div>
+</label>
+<label class='switch'>
+<div>Fri</div>
+<input type='checkbox' name='cb_fri' value='F'>
+<div class='switch-btn'></div>
+</label>
+<label class='switch'>
+<div>Sat</div>
+<input type='checkbox' name='cb_sat' value='S'>
+<div class='switch-btn'></div>
+</label>
+<label class='switch'>
+<div>Auto</div>
+<input type='checkbox' name='cb_auto' value='Auto'>
+<div class='switch-btn'></div>
+</label> 
+<label class='switch'>
+<div>Off</div>
+<input type='checkbox' name='cb_off' value='Off'>
+<div class='switch-btn'></div>
+</label>  
+</div>
+</fieldset>
+</form>
+</div>   
+</div> <!--end of set editing -->
+
+
+
+
+
+
+
+
+
+<div class='set-editing-section'>	   
+   
+   
+   <div class='form-wrap'>
+   
+   
+   <form action='' class='edit-set'>
+   
+   <h1 class='content-heading' >Edit Set</h1>   
+   <p>Name: <input type='text'/></p>
+   
+<fieldset class='select-days'>
+   <legend>Select Days to Execute</legend>
+   
+   <div class='switch-container'>
+   
+   <label class='switch'>
+   <div>Mon</div>
+   <input type='checkbox' name='cb_mon' value='M'>
+   <div class='switch-btn'></div>
+   </label>
+   
+   
+   <label class='switch'>
+   <div>Tue</div>
+   <input type='checkbox' name='cb_tue' value='T'>
+   <div class='switch-btn'></div>
+   </label>
+   
+   
+   <label class='switch'>
+   <div>Wed</div>
+   <input type='checkbox' name='cb_wed' value='W'>
+   <div class='switch-btn'></div>
+   </label>
+   
+   
+   <label class='switch'>
+   <div>Thr</div>
+   <input type='checkbox' name='cb_thr' value='TR'>
+   <div class='switch-btn'></div>
+   </label>
+   
+   
+   <label class='switch'>
+   <div>Fri</div>
+   <input type='checkbox' name='cb_fri' value='F'>
+   <div class='switch-btn'></div>
+   </label>
+   
+   
+   <label class='switch'>
+   <div>Sat</div>
+   <input type='checkbox' name='cb_sat' value='S'>
+   <div class='switch-btn'></div>
+   </label>
+  
+  
+   <label class='switch'>
+   <div>Auto</div>
+   <input type='checkbox' name='cb_auto' value='Auto'>
+   <div class='switch-btn'></div>
+   </label> 
+  
+  
+   <label class='switch'>
+   <div>Off</div>
+   <input type='checkbox' name='cb_off' value='Off'>
+   <div class='switch-btn'></div>
+   </label>  
+
+
+
+   </div>
+</fieldset>
+
+
+</form>
+
+</div> <!--end of form wrap-->   
+
+
+</div> <!--end of set editing -->
+
+
+ -- scheduled_for = '$scheduled_for'
+ <?php include('day_switch.php')?>
+
+
+ 	<table id='task-table modal-table'>
+				<tr class='table-heading'>
+					
+					<th>Tasks</th>
+					<th>Overdue limit</th>
+					<th>Last Performed</th>
+					<th></th>
+				</tr>
+
+				<?php
+
+				$dbc2 = db_connect();
+				$query2 = "SELECT * FROM tasks WHERE parent_set = $set_id";
+				if ( $r2 = mysqli_query( $dbc2, $query2 ) ) {
+				while ( $record2 = mysqli_fetch_array( $r2 ) ) {
+				$task_description = $record2['task_description'];
+				$overdue_point = $record2['overdue_point'];
+				$last_performed = isset($record['last_performed']) ? $record['last_performed'] : 'never';
+
+				?>
+
+				<tr>
+					
+					<td class='left-aligned-text' ><?php echo $task_description ?></td>
+					<td><?php echo $overdue_point ?> <span>Days</span></td>
+					<td><?php echo $last_performed ?></td>
+				</tr>
+
+				<?php } } db_disconnect($dbc2); ?> <!--query loop end-->
+
+				<!-- add new task -->
+				<tr>
+				
+					<td class='left-aligned-text' >
+					<textarea class='new-task-text' name="" id="" placeholder="Add new Task here"></textarea>
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="0">None</option>
+							<?php
+							for($i = 1; $i <= 90; $i++ ){
+								echo"<option value='$i'>$i</option>";
+							}
+							?>
+						</select>
+					</td>
+					<td><input class='btn-new-task' type="button" value="Add New Task"></td>
+				</tr>
+			</table>
+	   
