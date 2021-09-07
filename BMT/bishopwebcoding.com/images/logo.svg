@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.39 245.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #f2f2f2;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-size: 36.1px;
+        fill: #f2f2f2;
+        font-family: Verdana;
+      }
+    </style>
+  </defs>
+  <title>Asset 1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Drawing">
+      <g>
+        <path class="cls-1" d="M129,238.69l2.84-116.16c-59.59-13.67-113.79,0-113.79,0h0l-2.85,116A2.42,2.42,0,0,0,17.57,241h109A2.41,2.41,0,0,0,129,238.69Z"/>
+        <path class="cls-1" d="M22.57,121.5,1.2,49.55A4.82,4.82,0,0,1,4,43.72,186.33,186.33,0,0,1,42.91,33,4.84,4.84,0,0,0,45.23,32c18.22-15.19,34.25-17.72,56.94-.14a4.82,4.82,0,0,0,2.17.95,172.72,172.72,0,0,1,38,10.83,4.84,4.84,0,0,1,2.89,5.51l-16.17,72.35"/>
+        <line class="cls-1" x1="36.26" y1="76.29" x2="46.38" y2="117.42"/>
+        <line class="cls-1" x1="113.38" y1="76.29" x2="103.26" y2="117.42"/>
+        <ellipse class="cls-1" cx="74.02" cy="31.47" rx="29.8" ry="30.47"/>
+        <path class="cls-1" d="M16,202.62s58.82-16.73,113.79,0"/>
+        <path class="cls-1" d="M17,162.55s58.82-16.73,113.79,0"/>
+        <text class="cls-2" transform="translate(55.59 147.32) scale(1.43 1)">B<tspan x="-2.84" y="43.32">M</tspan><tspan x="1.25" y="86.63">T</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

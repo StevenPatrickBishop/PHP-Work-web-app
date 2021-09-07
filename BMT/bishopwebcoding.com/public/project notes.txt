@@ -1,0 +1,173 @@
+
+//database connection
+    <?php include "../../../DB/database.php" ?>
+
+
+//database data extraction 
+<?php 
+		$query = "";
+		$dbc = db_connect();
+		
+		if ( $r = mysqli_query( $dbc, $query ) ) {
+			while ( $record = mysqli_fetch_array( $r ) ) {
+				
+			}
+		}
+			
+		db_disconnect($dbc);
+
+	?>
+
+	//set a page title using php, pass it to the header. 
+
+
+  			<tr>
+               <td><p></p></td>
+               <td><p></p></td> 
+               <td><p></p></td>  
+            </tr>
+
+
+
+
+
+<table>
+					<tr class="odd"><th>Section 1</th></tr>
+					<tr class="even"><td></td><td>A Frame</td></tr>
+					<tr class="odd"><td></td><td>Large Floor Scales</td></tr>
+					<tr class="even"><td></td><td>IPS1</td></tr> 
+					<tr class="odd"><th>Section 2</th></tr>
+					<tr class="even"><td></td><td>Mezz Top</td></tr>
+					<tr class="odd"><td></td><td>Mezz Bottom</td></tr>
+					<tr class="even"><td></td><td>Mezz Sides</td></tr>
+				</table>
+
+
+
+SELECT s.set_name AS "set",
+	   s.set_id,
+       s.scheduled_for AS "day",
+       b.sub_name,
+       t.task_description AS "task",
+       t.last_performed AS "last"
+FROM sets s
+JOIN sub_sets b ON s.set_id = b.set_id
+JOIN tasks t on b.sub_id = t.subset_id
+WHERE s.scheduled_for = "Monday";
+
+
+CREATE TABLE activities(
+act_id integer not null PRIMARY key AUTO_INCREMENT,
+user integer not null,
+activity varchar(500) not null,
+task_ref integer,
+date date
+);
+
+
+
+
+
+function showOwnerWhoPerformedTask(){
+	
+	
+	
+	$query  = "	SELECT 		CONCAT(first_name, ' ', last_name) AS 'name'
+						   	FROM 	activities a
+						   	JOIN 	users u ON a.user = u.user_id
+							WHERE 	activity = '$task'
+							AND 	date = CURRENT_DATE();";
+
+	$dbc = db_connect();
+	
+
+
+				if ( $r = mysqli_query( $dbc, $query ) ){
+					while ( $record = mysqli_fetch_array( $r ) ) {
+						$name = $record['name']; 
+					}
+				}
+	
+	
+	db_disconnect($dbc2);
+	
+	return $name;
+}
+
+
+
+
+SELECT COUNT(t.task_id)tasks
+FROM tasks t
+JOIN sub_sets ss ON ss.sub_id = t.subset_id
+join sets s ON s.set_id = ss.set_id
+WHERE s.scheduled_for = DAYNAME(CURRENT_DATE());
+
+
+SELECT COUNT(user_id) from users;
+
+
+SELECT COUNT(user_id),
+(SELECT COUNT(DISTINCT user) from activities WHERE date = '2019-07-27')
+FROM users;
+
+SELECT * from activities;
+
+
+SELECT ROUND((SELECT COUNT(DISTINCT user) 
+         FROM activities
+         WHERE date = '2019-07-27') / 
+         COUNT(user_id),2) AS "Team Participation"
+FROM     users
+WHERE	 title IN('Operator');
+
+SELECT * from users;
+
+
+
+daily Participation
+
+SELECT ROUND((SELECT COUNT(DISTINCT user) 
+         FROM activities
+         WHERE date = '2019-07-27'
+         AND user IN((SELECT user_id from users where title IN('Operator', 'Material Handler')))) / 
+         COUNT(user_id),2) AS "Team Participation"
+FROM     users
+WHERE	 title IN('Operator','Material Handler');
+
+
+
+yesterday's report 
+
+SELECT 	CONCAT(u.first_name,' ', u.last_name) AS 'name',
+(SELECT sub_name from sub_sets
+WHERE sub_id = (SELECT subset_id from tasks where task_description = a.activity)) AS 'Area',
+		activity,
+        date
+FROM 	activities a
+JOIN 	users u on u.user_id = a.user
+WHERE  date = CURRENT_DATE()-1;
+
+
+<div id="simpleModal" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3>Have a comment or suggestion?</h3>
+			<span class="closeBtn">&times;</span>
+		</div>
+		<textarea name="comments" class='modal-text'placeholder="Add a comment or suggestion here"></textarea>
+		<div class="modal-footer">
+			<div class="modal_skip_comment">
+				<!--<input type="submit" name='complete_task' value="Skip" />-->
+				<input type='submit' class='task-btnn' name='complete_task' value ='Own it'/>
+			</div>
+			<div class="modal_add_comment">
+				<input type="submit" name='complete_task_with_comment' value="Submit"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+        

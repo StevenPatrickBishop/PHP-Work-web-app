@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Batch Grades</title>
+      <link rel="stylesheet" href="styles/resetb.css" />
+      <link rel="stylesheet" href="styles/styleb.css" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <header>
+         <div class="content-wrap">
+            <div class="app-name">
+               <h1>Batch Grades</h1>
+            </div>
+         </div>
+      </header>
+      <main>
+         <div class="content-wrap">
+            <div class="grading-section">
+               <!----------------------------------------Component Section-------------------------------------------------->
+               <div class="components">
+                  <h2 class="category-header">Components</h2>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Monomers</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c1">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-1">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Oligomer</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c2">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-2">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Filler</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c3">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-3">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Cab/Para</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c4">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-4">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Thixo</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c5">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-5">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Perox</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c6">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-6">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                   
+                   
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>ACRYL</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c7">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-7">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                   <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>CND</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="c8">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="com-switch-8">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                   
+                   
+                   
+               </div>
+                
+                
+               <!--add on section-->
+               <div class="add-ons">
+                  <h2 class="category-header" >Add Ons</h2>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Drum Setup</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a1">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-1">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Heat</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a2">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-2">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Cool</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a3">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-3">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Filter</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a4">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-4">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Packout / </h3>
+                           <h3>Clean-out</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a5">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-5">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Ross</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a6">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-6">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                  <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Role Drum</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a7">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-7">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>
+                   
+                   <div class="selection-box">
+                     <div class="selection-details">
+                        <div Class="description">
+                           <h3>Extra Handling</h3>
+                        </div>
+                        <div class="point-value">
+                           <h3 id="a8">0.025</h3>
+                           <p>Points</p>
+                        </div>
+                     </div>
+                     <button class="selection-switch" id="addOn-switch-8">
+                        <svg class="cross" viewBox="0 0 47.67 47.67">
+                           <g>
+                              <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                              <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                              <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                           </g>
+                        </svg>
+                        <p>Add</p>
+                     </button>
+                  </div>                   
+                   
+
+               </div>
+               <div class="size-quantity-grade">
+                  <div class="size-quantity">
+                    
+                      <!--entry form-->
+                     <h2 class="category-header" >Size &amp; Quantity</h2>
+                     <div class="selection-box">
+                        <div class="selection-details">
+                           <div Class="description">
+                              <h3>Raws</h3>
+                              <h3>Qty</h3>
+                           </div>
+                           <div class="qty-entry">
+                                <input type="text" id="qty-input" placeholder="qty">
+                           </div>
+                           <div class="point-value">
+                              <h3 id="i1">X 0.225</h3>
+                              <p>Points</p>
+                           </div>
+                        </div>
+                        <button class="selection-switch" id="qty-switch-1">
+                           <svg class="cross" viewBox="0 0 47.67 47.67">
+                              <g>
+                                 <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                                 <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                                 <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                              </g>
+                           </svg>
+                           <p>Add</p>
+                        </button>
+                     </div>
+                     <div class="selection-box">
+                        <div class="selection-details">
+                           <div Class="description">
+                              <h3>Batch</h3>
+                              <h3>Size</h3>
+                           </div>
+                           <div class="size-entry">
+                                <input type="text" id="size-input" placeholder="size">
+                           </div>
+                           <div class="point-value">
+                              <h3 id="i2">X 0.003</h3>
+                              <p>Points</p>
+                           </div>
+                        </div>
+                        <button class="selection-switch" id="size-switch-1">
+                           <svg class="cross" viewBox="0 0 47.67 47.67">
+                              <g>
+                                 <circle class="cls-1" cx="23.83" cy="23.83" r="23.33" />
+                                 <line class="cls-1" x1="23.43" y1="10.56" x2="23.43" y2="36.3" />
+                                 <line class="cls-1" x1="36.71" y1="23.43" x2="10.96" y2="23.43" />
+                              </g>
+                           </svg>
+                           <p>Add</p>
+                        </button>
+                     </div>
+                  </div>
+                  <!----------------------------------batch grade------------------------------------------------->
+                  <div class="grade">
+                     <div class="grade-box">
+                        <h2 id="grade-val">0</h2>
+                     </div>
+                     <h2>points</h2>
+                  </div>
+                  <div class="reset-section">
+                     <button class="reset-box">
+                        <h2>Reset Form</h2>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer>
+         <div class="content-wrap">
+                <img class="logo" src="images/logo.svg" alt="BMT logo">
+                <div class="logo-text">
+                <p>Bishop</p>
+                <p>Manufacturing</p>
+                <p>Tools &copy; 2019</p>
+            </div>
+         </div>
+      </footer>
+   </body>
+   <script src="scripts/scriptb.js"></script>
+</html>
